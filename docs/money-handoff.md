@@ -32,13 +32,16 @@ Acceptable proof:
 
 ## First Payment Path
 
-1. Put payment and contact details in `site/config.js`.
+1. Put payment and contact details in `site/config.js` with
+   `node scripts/configure-launch.js`.
 2. Publish `site/` to a public URL.
 3. Put the public URL in `site/config.js` as `siteUrl`.
 4. Add 30 qualified prospects to `ops/prospects.csv`.
 5. Run `npm run launch:check`.
 6. Generate tailored outreach with `node scripts/render-outreach.js`.
 7. Send 10 high-fit messages per day.
-8. For interested prospects, ask for a redacted usage CSV.
-9. Return an audit within 24 hours and ask them to start the $100/month plan.
-10. Record payment proof in `ops/revenue-proof.csv`.
+8. Mark sent prospects with `node scripts/mark-prospect-sent.js --company=...`.
+9. For interested prospects, ask for a redacted usage CSV.
+10. Return an audit within 24 hours with `node scripts/audit-csv.js`.
+11. Ask them to start the $100/month plan.
+12. Record payment proof in `ops/revenue-proof.csv`.

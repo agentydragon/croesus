@@ -45,6 +45,27 @@ npm run launch:check
 The check intentionally fails until a real checkout/contact path, live site URL,
 30 prospects, and revenue proof are present.
 
+When real payment/contact details are available, update the site config with:
+
+```sh
+node scripts/configure-launch.js \
+  --payment='https://buy.stripe.com/...' \
+  --email='sales@example.com' \
+  --site='https://your-live-site.example'
+```
+
+Generate the first outreach batch:
+
+```sh
+npm run outreach:batch
+```
+
+Generate a fulfillment report from a customer CSV:
+
+```sh
+npm run audit:sample
+```
+
 ## Offer
 
 The current productized service is:
