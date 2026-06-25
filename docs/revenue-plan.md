@@ -39,6 +39,8 @@ The first payment path is provisioned:
 
 - Bitcoin address: `13pQjTm4ESjPKMA9a5gQF4H1CH561axzqk`
 - Payment/contact issue: https://github.com/agentydragon/croesus/issues/1
+- Launch discussion: https://github.com/agentydragon/croesus/discussions/2
+- Launch release: https://github.com/agentydragon/croesus/releases/tag/launch-2026-06-25
 - Public repo: https://github.com/agentydragon/croesus
 
 The launch gate should now pass everything except actual revenue proof until a

@@ -27,6 +27,12 @@ Payment/contact issue:
 https://github.com/agentydragon/croesus/issues/1
 ```
 
+Launch discussion:
+
+```text
+https://github.com/agentydragon/croesus/discussions/2
+```
+
 After payment, open an issue or comment with a redacted CSV containing:
 
 - Date
@@ -75,6 +81,12 @@ Render the next outreach batch:
 
 ```sh
 npm run outreach:batch
+```
+
+Check received revenue:
+
+```sh
+npm run revenue:check
 ```
 
 The wallet private key is intentionally not committed. It is generated locally

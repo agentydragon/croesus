@@ -13,10 +13,16 @@ Current Bitcoin receiving address:
 Check for transactions:
 
 ```sh
-curl -sS https://blockstream.info/api/address/13pQjTm4ESjPKMA9a5gQF4H1CH561axzqk
+npm run revenue:check
 ```
 
 Record confirmed payment in `ops/revenue-proof.csv`.
+
+Public intake links:
+
+- Checkout/contact issue: https://github.com/agentydragon/croesus/issues/1
+- Launch discussion: https://github.com/agentydragon/croesus/discussions/2
+- Launch release: https://github.com/agentydragon/croesus/releases/tag/launch-2026-06-25
 
 ## Data Request
 
