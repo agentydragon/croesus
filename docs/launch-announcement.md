@@ -31,6 +31,12 @@ Bitcoin payment URI:
 bitcoin:13pQjTm4ESjPKMA9a5gQF4H1CH561axzqk?label=Croesus%20AI%20Spend%20Review&message=Croesus%20monthly%20AI%20spend%20review
 ```
 
+Sample report:
+
+```text
+https://github.com/agentydragon/croesus/blob/main/docs/sample-audit-report.md
+```
+
 Useful CSV columns:
 
 ```csv

@@ -10,6 +10,7 @@
     "audit:sample": "node scripts/audit-csv.js assets/sample-usage.csv --customer=SampleCo --month=2026-06 --spend=2500 --fee=100",
     "wallet:provision": "node scripts/provision-bitcoin-wallet.js",
     "revenue:check": "node scripts/check-revenue.js",
+    "payment:quote": "node scripts/quote-payment.js 100",
     "launch:check": "node scripts/check-launch-readiness.js",
     "serve": "python3 -m http.server 8123 --directory site"
   }

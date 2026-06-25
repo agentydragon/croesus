@@ -21,6 +21,12 @@ Bitcoin payment URI:
 bitcoin:13pQjTm4ESjPKMA9a5gQF4H1CH561axzqk?label=Croesus%20AI%20Spend%20Review&message=Croesus%20monthly%20AI%20spend%20review
 ```
 
+Generate a current `$100` BTC quote:
+
+```sh
+npm run payment:quote
+```
+
 Payment/contact issue:
 
 ```text
@@ -51,6 +57,12 @@ After payment, open an issue or comment with a redacted CSV containing:
 - Specific first implementation step
 - One-page report suitable for an engineering owner
 - Optional monthly repeat review
+
+Sample report:
+
+```text
+https://github.com/agentydragon/croesus/blob/main/docs/sample-audit-report.md
+```
 
 ## Tool
 

@@ -10,6 +10,12 @@ Current Bitcoin receiving address:
 13pQjTm4ESjPKMA9a5gQF4H1CH561axzqk
 ```
 
+Generate a current `$100` payment URI:
+
+```sh
+npm run payment:quote
+```
+
 Check for transactions:
 
 ```sh
