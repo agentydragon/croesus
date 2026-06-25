@@ -86,6 +86,7 @@ function render(prospect, config) {
   const company = prospect.company || "your team";
   const signal = prospect.signal || "you are shipping AI features";
   const paymentLink = prospect.payment_link || config.stripePaymentLink || config.cryptoPaymentUri || config.siteUrl || "[payment link]";
+  const contact = config.contactEmail || config.bookingUrl || config.siteUrl || "[contact link]";
   const sourceLine = prospect.signal_url ? `Source signal: ${prospect.signal_url}` : "";
 
   const lines = [
@@ -101,7 +102,7 @@ function render(prospect, config) {
     "",
     "If you prefer, reply with a redacted usage CSV and I will tell you whether the audit is worth paying for.",
     "",
-    config.contactEmail ? `Contact: ${config.contactEmail}` : "Contact: [sales email]"
+    `Contact: ${contact}`
   ];
   if (sourceLine) {
     lines.push("", sourceLine);

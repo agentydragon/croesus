@@ -8,6 +8,7 @@
     "outreach:sample": "node scripts/render-outreach.js assets/sample-prospects.csv",
     "outreach:batch": "node scripts/render-outreach.js ops/prospects.csv --only-unsent --limit=10",
     "audit:sample": "node scripts/audit-csv.js assets/sample-usage.csv --customer=SampleCo --month=2026-06 --spend=2500 --fee=100",
+    "wallet:provision": "node scripts/provision-bitcoin-wallet.js",
     "launch:check": "node scripts/check-launch-readiness.js",
     "serve": "python3 -m http.server 8123 --directory site"
   }
