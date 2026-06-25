@@ -41,6 +41,7 @@ The first payment path is provisioned:
 - Payment/contact issue: https://github.com/agentydragon/croesus/issues/1
 - Launch discussion: https://github.com/agentydragon/croesus/discussions/2
 - Launch release: https://github.com/agentydragon/croesus/releases/tag/launch-2026-06-25
+- Launch packet: `docs/launch-packet.md`
 - Public repo: https://github.com/agentydragon/croesus
 
 The launch gate should now pass everything except actual revenue proof until a

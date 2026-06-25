@@ -15,6 +15,12 @@ model routing, prompt size, cache misses, retry loops, and spend spikes.
 
 ## Buy
 
+GitHub funding button:
+
+```text
+https://github.com/agentydragon/croesus
+```
+
 Bitcoin payment URI:
 
 ```text
@@ -93,6 +99,12 @@ Render the next outreach batch:
 
 ```sh
 npm run outreach:batch
+```
+
+Use the launch packet for manual distribution:
+
+```text
+docs/launch-packet.md
 ```
 
 Check received revenue:
