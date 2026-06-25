@@ -33,16 +33,16 @@ Refund rule:
 - Refund the first month if the audit cannot identify savings or risk reduction
   worth at least the fee.
 
-## Required Account Inputs
+## Payment Path
 
-The repo cannot collect money until one payment destination is added:
+The first payment path is provisioned:
 
-- Stripe Payment Link for a recurring $100/month plan
-- Gumroad/Lemon Squeezy recurring product URL
-- Coinbase Commerce checkout
-- Crypto payment URI controlled by the user
+- Bitcoin address: `13pQjTm4ESjPKMA9a5gQF4H1CH561axzqk`
+- Payment/contact issue: https://github.com/agentydragon/croesus/issues/1
+- Public repo: https://github.com/agentydragon/croesus
 
-Configure it in `site/config.js`.
+The launch gate should now pass everything except actual revenue proof until a
+customer pays.
 
 ## Prospect Criteria
 
@@ -67,12 +67,11 @@ Prioritize warm or semi-warm channels before cold email:
 
 ## Launch Checklist
 
-1. Add payment link or crypto URI to `site/config.js`.
-2. Publish `site/` to a public URL.
-3. Send 30 targeted messages.
-4. Offer the first 5 customers the $100/month launch price.
-5. Convert paid customer CSVs into one-page reports within 24 hours.
-6. Ask paid customers for permission to reuse anonymized savings numbers.
+1. Send 30 targeted messages.
+2. Offer the first 5 customers the $100/month launch price.
+3. Convert paid customer CSVs into one-page reports within 24 hours.
+4. Ask paid customers for permission to reuse anonymized savings numbers.
+5. Record payment proof in `ops/revenue-proof.csv`.
 
 ## Proof Log
 
@@ -80,5 +79,4 @@ Record revenue proof here as it arrives:
 
 | Date | Customer | Amount | Cadence | Payment proof | Notes |
 | --- | --- | ---: | --- | --- | --- |
-| TBD | TBD | $0 | TBD | TBD | Waiting for first payment destination |
-
+| TBD | TBD | $0 | TBD | TBD | Waiting for first payment |

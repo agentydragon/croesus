@@ -1,0 +1,33 @@
+name: Paid AI Spend Audit
+description: Submit a paid Croesus AI spend audit request.
+title: "Paid audit request: "
+labels:
+  - paid-audit
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for buying a Croesus AI spend review. Include only redacted usage data.
+  - type: input
+    id: payment
+    attributes:
+      label: Payment transaction
+      description: Bitcoin transaction ID or other payment proof.
+      placeholder: txid
+    validations:
+      required: true
+  - type: textarea
+    id: csv
+    attributes:
+      label: Redacted usage CSV
+      description: Include date, feature/team, model, input tokens, output tokens, cached tokens, request count, and cost.
+      render: csv
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Any goals, known constraints, or workflows we should understand.
+    validations:
+      required: false

@@ -1,16 +1,55 @@
-# Croesus
+# Croesus AI Spend Audit
 
-Croesus is a small, self-contained AI spend audit tool and service wrapper.
-It helps teams paste or upload LLM usage CSVs, find waste patterns, and buy a
-monthly optimization review.
+Croesus is a monthly AI spend leak review for teams already paying for OpenAI,
+Anthropic, or other LLM APIs.
 
-Revenue target: two customers at $100/month, or one customer at $200/month.
+Send a redacted usage CSV. Receive a one-page report with concrete cuts for
+model routing, prompt size, cache misses, retry loops, and spend spikes.
 
-## Run
+## Launch Offer
 
-Open `site/index.html` in a browser. No build step or server is required.
+- First 5 customers: `$100/month`
+- Standard price after launch: `$200/month`
+- Refund rule: if the first review cannot identify savings or risk reduction
+  worth at least the first-month fee, refund the first month.
 
-For a local HTTP preview:
+## Buy
+
+Bitcoin payment URI:
+
+```text
+bitcoin:13pQjTm4ESjPKMA9a5gQF4H1CH561axzqk?label=Croesus%20AI%20Spend%20Review&message=Croesus%20monthly%20AI%20spend%20review
+```
+
+Payment/contact issue:
+
+```text
+https://github.com/agentydragon/croesus/issues/1
+```
+
+After payment, open an issue or comment with a redacted CSV containing:
+
+- Date
+- Feature or team
+- Model
+- Input tokens
+- Output tokens
+- Cached tokens
+- Request count
+- Cost
+
+## What You Get
+
+- Review of one month of usage exports or billing line items
+- Estimated monthly savings and risk-reduction opportunities
+- Specific first implementation step
+- One-page report suitable for an engineering owner
+- Optional monthly repeat review
+
+## Tool
+
+The static audit tool is in `site/`. It runs locally and does not require a
+server:
 
 ```sh
 npm run serve
@@ -18,62 +57,25 @@ npm run serve
 
 Then open `http://localhost:8123`.
 
-## Configure Payments
-
-Set at least one payment destination in `site/config.js`:
-
-```js
-window.CROESUS_CONFIG = {
-  stripePaymentLink: "https://buy.stripe.com/...",
-  cryptoPaymentUri: "ethereum:0x...",
-  contactEmail: "you@example.com",
-  bookingUrl: "",
-  siteUrl: "https://example.com"
-};
-```
-
-Payment links, booking URLs, and crypto receiving addresses are public checkout
-details, so publishing them with the site is expected. Do not put API keys or
-processor secrets in this repo.
-
-Check whether the project is launch-ready:
-
-```sh
-npm run launch:check
-```
-
-The check intentionally fails until a real checkout/contact path, live site URL,
-30 prospects, and revenue proof are present.
-
-When real payment/contact details are available, update the site config with:
-
-```sh
-node scripts/configure-launch.js \
-  --payment='https://buy.stripe.com/...' \
-  --email='sales@example.com' \
-  --site='https://your-live-site.example'
-```
-
-Generate the first outreach batch:
-
-```sh
-npm run outreach:batch
-```
-
-Generate a fulfillment report from a customer CSV:
+Generate a sample report:
 
 ```sh
 npm run audit:sample
 ```
 
-## Offer
+## Operations
 
-The current productized service is:
+Check launch readiness:
 
-- $100/month AI spend leak review
-- Monthly usage review
-- Concrete routing, caching, and prompt-trimming recommendations
-- Cancellation anytime
+```sh
+npm run launch:check
+```
 
-The first milestone is not a polished platform. It is money received for an
-audit offer with a useful artifact attached.
+Render the next outreach batch:
+
+```sh
+npm run outreach:batch
+```
+
+The wallet private key is intentionally not committed. It is generated locally
+under `.secrets/` and must be backed up before accepting funds.
