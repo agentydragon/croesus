@@ -1,0 +1,13 @@
+{
+  "name": "croesus",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI spend audit tool and revenue operations kit.",
+  "scripts": {
+    "test": "node tests/croesus.test.js",
+    "outreach:sample": "node scripts/render-outreach.js assets/sample-prospects.csv",
+    "outreach:batch": "node scripts/render-outreach.js ops/prospects.csv --only-unsent --limit=10",
+    "launch:check": "node scripts/check-launch-readiness.js",
+    "serve": "python3 -m http.server 8123 --directory site"
+  }
+}

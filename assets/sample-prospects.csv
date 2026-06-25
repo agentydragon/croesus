@@ -1,0 +1,3 @@
+company,contact_name,role,signal,signal_url,contact_channel,payment_link,message_sent_date,response,payment_status,notes
+ExampleAI,Sam,Founder,ExampleAI is hiring for AI product engineers,https://example.com,Email,,,,,Sample row for renderer tests
+

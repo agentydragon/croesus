@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Croesus AI Spend Audit</title>
+    <meta
+      name="description"
+      content="Find AI usage waste and turn LLM invoices into concrete savings recommendations."
+    >
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./config.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace" aria-label="AI spend audit workspace">
+        <aside class="control-panel">
+          <div class="brand-block">
+            <p class="eyebrow">Croesus</p>
+            <h1>AI spend leak audit</h1>
+            <p class="lede">
+              Load usage data, identify avoidable LLM spend, and buy a monthly
+              review that pays for itself by finding waste.
+            </p>
+          </div>
+
+          <form class="controls" id="audit-form">
+            <label class="field">
+              <span>Monthly AI spend</span>
+              <input id="monthly-spend" type="number" min="0" step="100" value="2500">
+            </label>
+
+            <label class="field">
+              <span>Gross margin value per engineering hour</span>
+              <input id="hour-value" type="number" min="0" step="25" value="150">
+            </label>
+
+            <label class="field">
+              <span>Monthly review fee</span>
+              <input id="review-fee" type="number" min="0" step="25" value="100">
+            </label>
+
+            <div class="field">
+              <span>Usage CSV</span>
+              <input id="csv-file" type="file" accept=".csv,text/csv">
+              <button class="secondary" type="button" id="load-sample">
+                Load sample
+              </button>
+            </div>
+
+            <label class="field">
+              <span>Paste CSV</span>
+              <textarea id="csv-input" spellcheck="false"></textarea>
+            </label>
+
+            <button class="primary" type="submit">Analyze spend</button>
+          </form>
+        </aside>
+
+        <section class="report-panel" aria-live="polite">
+          <header class="report-header">
+            <div>
+              <p class="eyebrow">Buyer report</p>
+              <h2 id="report-title">Potential savings report</h2>
+            </div>
+            <div class="status-pill" id="data-status">Sample ready</div>
+          </header>
+
+          <section class="metric-grid" aria-label="Audit metrics">
+            <article class="metric">
+              <span>Estimated waste</span>
+              <strong id="waste-total">$0</strong>
+            </article>
+            <article class="metric">
+              <span>Net first-month upside</span>
+              <strong id="net-upside">$0</strong>
+            </article>
+            <article class="metric">
+              <span>Payback</span>
+              <strong id="payback">0.0x</strong>
+            </article>
+          </section>
+
+          <section class="visual-section">
+            <canvas id="spend-chart" width="960" height="320" aria-label="Spend by model chart"></canvas>
+          </section>
+
+          <section class="findings">
+            <h3>Findings</h3>
+            <div id="findings-list" class="finding-list"></div>
+          </section>
+
+          <section class="buy-strip" id="buy-strip">
+            <div>
+              <h3>Monthly AI spend review</h3>
+              <p id="offer-copy">
+                $100/month for a recurring audit of model mix, prompt size,
+                cacheability, and suspicious usage spikes.
+              </p>
+            </div>
+            <div class="buy-actions">
+              <a class="primary link-button" id="pay-link" href="#" target="_blank" rel="noreferrer">
+                Pay monthly
+              </a>
+              <a class="secondary link-button" id="contact-link" href="#">
+                Send CSV
+              </a>
+            </div>
+          </section>
+
+          <p class="launch-warning is-hidden" id="launch-warning">
+            Checkout is not configured yet.
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
